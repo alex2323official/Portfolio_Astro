@@ -8,10 +8,11 @@
       Hi! I’m Alex Boczek. Full-stack Developer From Poland.
     </h1>
     <p class="home__text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, sint
-      labore soluta quidem minima nobis exercitationem dicta possimus, facere
-      cupiditate magnam maiores nesciunt reprehenderit consequuntur sed numquam
-      molestias. Consequatur, corrupti?
+      Full-stack developer (she / her) with over three years of programming
+      experience. I worked commercially as a freelance JS and PHP developer for
+      14 months before transitioning to full-stack JavaScript, which has been my
+      focus for the past year. Based in Gliwice, I’m open to local or remote
+      work, as well as relocation.
     </p>
     <div class="home__left-bottom-container">
       <button type="button" class="home__btn">Portfolio</button>
@@ -32,20 +33,25 @@
   @import "../styles/variables.scss";
 
   //   TODO: remember about this linear-gradient text trick
-  h1 {
-    font-size: $fontsize-h1-62px;
-    background: $main-gradient;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 
   .home {
     max-width: 1170px;
     width: 100%;
     display: flex;
-
     .home__left {
+      h1 {
+        font-size: $fontsize-h1-62px;
+        background: $main-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+        line-height: 75px;
+      }
       .home__text {
+        width: 554px;
+        font-size: $fontsize-hero-btntext-20px;
+        font-weight: 400;
+        line-height: 1.4;
       }
 
       .home__left-bottom-container {
