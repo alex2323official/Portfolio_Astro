@@ -52,12 +52,26 @@ const logosUrls = [
 ---
 
 <section class="logos">
-  <h2>Logos section</h2>
+  {
+    logosUrls.map((item) => (
+      <img class="logos__img" src={item.url} alt={item.alt} />
+    ))
+  }
 </section>
 
 <style lang="scss">
   @import "../styles/variables.scss";
 
   .logos {
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 150px 0px;
+    &__img {
+      height: 40px;
+      width: auto;
+    }
   }
 </style>
