@@ -66,6 +66,16 @@
           font-weight: 700;
           font-size: $fontsize-hero-btntext-20px;
           padding: 22px 30px;
+
+          transition:
+            background-color 0.3s ease,
+            transform 0.3s ease;
+
+          &:hover {
+            background-color: $color-orange;
+            cursor: pointer;
+            transform: translateY(-4px);
+          }
         }
 
         .home__contact-container {
@@ -78,6 +88,11 @@
             text-decoration: none;
             font-size: $fontsize-hero-btntext-20px;
             font-weight: 500;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $color-orange;
+            }
           }
 
           .home__contact-phone {
@@ -85,6 +100,11 @@
             text-decoration: none;
             font-size: $fontsize-hero-btntext-20px;
             font-weight: 500;
+            transition: color 0.3s ease;
+
+            &:hover {
+              color: $color-orange;
+            }
           }
         }
       }
