@@ -55,17 +55,23 @@ const navLinks = [
   header {
     max-width: 1170px;
     width: 100%;
-    background-color: red;
     .header__container {
       display: flex;
+      align-items: center;
       .header__logo {
         font-size: $fontsize-text-18px;
         font-weight: 800;
         text-transform: uppercase;
+        margin-right: 2.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0 !important;
       }
       .header__nav {
         .header__nav-ul {
           display: flex;
+          align-items: center;
           list-style: none;
           .header__nav-li {
             margin-right: 2.5rem;
@@ -74,10 +80,25 @@ const navLinks = [
               font-size: $fontsize-text-18px;
               font-weight: 500;
               text-decoration: none;
+
+              transition: color 0.3s ease;
+            }
+            .header__nav-a:hover {
+              color: $color-orange;
             }
           }
           .header__nav-li:last-of-type {
             margin-right: 0rem;
+
+            padding: 10px 15px;
+            border: 1px solid transparent; /* Set a transparent border */
+            border-radius: 0px;
+            border-image: linear-gradient(
+                to right,
+                $color-purple,
+                $color-orange
+              )
+              1;
           }
         }
       }
