@@ -3,7 +3,41 @@
 ---
 
 <section class="skills">
-  <h1>skills</h1>
+  <div class="skills__top">
+    <h3 class="skills__h3">My Programming Skills</h3>
+    <p class="skills__mini-text">Ready to learn new technlogies</p>
+  </div>
+  <div class="skills__bottom">
+    <!-- Front-End -->
+    <div class="skills__bottom-single">
+      <div class="skills__bottom-line"></div>
+      <h4 class="skills__h4">Front-end Skills</h4>
+      <p class="skills__h4-paragraph">
+        JavaScript, TypeScript, React, Astro HTML5, CSS3, SCSS, Vite, Vitest /
+        Jest, NPM
+      </p>
+    </div>
+
+    <!-- Front-End -->
+    <div class="skills__bottom-single">
+      <div class="skills__bottom-line"></div>
+      <h4 class="skills__h4">Front-end Skills</h4>
+      <p class="skills__h4-paragraph">
+        JavaScript, TypeScript, React, Astro HTML5, CSS3, SCSS, Vite, Vitest /
+        Jest, NPM
+      </p>
+    </div>
+
+    <!-- Front-End -->
+    <div class="skills__bottom-single">
+      <div class="skills__bottom-line"></div>
+      <h4 class="skills__h4">Front-end Skills</h4>
+      <p class="skills__h4-paragraph">
+        JavaScript, TypeScript, React, Astro HTML5, CSS3, SCSS, Vite, Vitest /
+        Jest, NPM
+      </p>
+    </div>
+  </div>
 </section>
 
 <style lang="scss">
@@ -12,6 +46,34 @@
   .skills {
     max-width: 1170px;
     width: 100%;
-    background-color: pink;
+    background-color: $color-blue-medium;
+
+    &__top {
+      display: flex;
+      justify-content: space-between;
+      .skills__h3 {
+        margin-left: 3.125rem; // 50px
+        color: $color-orange;
+      }
+
+      .skills__mini-text {
+        margin-right: 3.125rem; // 50px
+        color: $color-orange;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      .skills__bottom-single {
+        .skills__bottom-line {
+        }
+
+        .skills__h4 {
+        }
+
+        .skills__h4-paragraph {
+        }
+      }
+    }
   }
 </style>
