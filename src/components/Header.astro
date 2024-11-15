@@ -1,11 +1,70 @@
 ---
-
+const navLinks = [
+  {
+    title: "Home",
+    url: "#home",
+  },
+  {
+    title: "My Skills",
+    url: "#my-skills",
+  },
+  {
+    title: "Work Experience",
+    url: "#work-experience",
+  },
+  {
+    title: "Why me?",
+    url: "#why-me",
+  },
+  {
+    title: "Portfolio",
+    url: "#portfolio",
+  },
+  {
+    title: "Contact",
+    url: "#contact",
+  },
+  {
+    title: "GitHub",
+    url: "#github",
+  },
+];
 ---
 
 <header>
-	<p>test header</p>
+  <div class="header__container">
+    <p class="header__logo">Alex Boczek</p>
+    <nav class="header__nav">
+      <ul class="header__nav-ul">
+        {
+          navLinks.map((item) => (
+            <li class="header__nav-li">
+              <a class="header__nav-a" href={item.url}>
+                {item.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <style lang="scss">
-
+  header {
+    .header__container {
+      display: flex;
+      .header__logo {
+      }
+      .header__nav {
+        .header__nav-ul {
+          display: flex;
+          .header__nav-li {
+            .header__nav-a {
+            }
+          }
+        }
+      }
+    }
+  }
 </style>
