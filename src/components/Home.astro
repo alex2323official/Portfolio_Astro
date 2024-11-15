@@ -42,16 +42,20 @@
   .home {
     max-width: 1170px;
     width: 100%;
+    display: flex;
 
     .home__left {
       .home__text {
       }
 
       .home__left-bottom-container {
+        display: flex;
         .home__btn {
         }
 
         .home__contact-container {
+          display: flex;
+          flex-direction: column;
           .home__contact-email {
           }
 
@@ -62,6 +66,9 @@
     }
 
     .home__right {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
     }
   }
 </style>
