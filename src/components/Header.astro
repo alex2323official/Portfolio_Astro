@@ -51,17 +51,33 @@ const navLinks = [
 </header>
 
 <style lang="scss">
+  @import "../styles/variables.scss";
   header {
+    max-width: 1170px;
+    width: 100%;
+    background-color: red;
     .header__container {
       display: flex;
       .header__logo {
+        font-size: $fontsize-text-18px;
+        font-weight: 800;
+        text-transform: uppercase;
       }
       .header__nav {
         .header__nav-ul {
           display: flex;
+          list-style: none;
           .header__nav-li {
+            margin-right: 2.5rem;
             .header__nav-a {
+              color: $color-white;
+              font-size: $fontsize-text-18px;
+              font-weight: 500;
+              text-decoration: none;
             }
+          }
+          .header__nav-li:last-of-type {
+            margin-right: 0rem;
           }
         }
       }
