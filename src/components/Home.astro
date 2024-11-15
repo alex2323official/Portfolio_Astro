@@ -3,7 +3,29 @@
 ---
 
 <section class="home">
-  <h1>Hi! I’m Alex Boczek. Full-stack Developer From Poland.</h1>
+  <div class="home__left">
+    <h1 class="home__h1">
+      Hi! I’m Alex Boczek. Full-stack Developer From Poland.
+    </h1>
+    <p class="home__text">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, sint
+      labore soluta quidem minima nobis exercitationem dicta possimus, facere
+      cupiditate magnam maiores nesciunt reprehenderit consequuntur sed numquam
+      molestias. Consequatur, corrupti?
+    </p>
+    <div class="home__left-bottom-container">
+      <button type="button" class="home__btn">Portfolio</button>
+      <div class="home__contact-container">
+        <a href="mailto:kontakt@alexboczek.pl" class="home__contact-email"
+          >E-mail: kontakt@alexboczek.pl</a
+        >
+        <a href="tel:+48720432964" class="home__contact-phone"
+          >Phone: +48 720-432-964</a
+        >
+      </div>
+    </div>
+  </div>
+  <img class="home__right" src="/Alex_Boczek.webp" alt="Alex Boczek Photo" />
 </section>
 
 <style lang="scss">
@@ -15,5 +37,31 @@
     background: $main-gradient;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+  }
+
+  .home {
+    max-width: 1170px;
+    width: 100%;
+
+    .home__left {
+      .home__text {
+      }
+
+      .home__left-bottom-container {
+        .home__btn {
+        }
+
+        .home__contact-container {
+          .home__contact-email {
+          }
+
+          .home__contact-phone {
+          }
+        }
+      }
+    }
+
+    .home__right {
+    }
   }
 </style>
