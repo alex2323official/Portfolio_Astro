@@ -71,8 +71,10 @@
   .experience {
     max-width: 1170px;
     width: 100%;
-    margin-top: 9.375rem; // 150px
+    margin: 9.375rem 0; // 150px
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 
     &__left {
       &-h2 {
@@ -82,12 +84,17 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         width: 426px;
+
+        &:last-of-type {
+          margin-top: 6.25rem; // 100px
+        }
       }
     }
 
     &__right {
       &-single-container {
         display: flex;
+        margin-top: 1rem;
         .experience__right-left {
           .experience__right-visualline {
             background: $main-gradient;
@@ -96,6 +103,8 @@
           }
 
           .experience__right-h4 {
+            width: 7.125rem; // 114px
+            line-height: 1.5rem; // 24px
             &-color {
               color: $color-orange;
             }
@@ -103,7 +112,12 @@
         }
 
         .experience__right-right {
+          margin-left: 100px;
           .experience__right-text {
+            color: $color-blue-light;
+            font-weight: 500;
+            font-size: $fontsize-text-14px;
+            width: 20.875rem; // 334px
           }
         }
       }
