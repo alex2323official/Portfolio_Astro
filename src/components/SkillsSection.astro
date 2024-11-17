@@ -5,7 +5,7 @@
 <section class="skills">
   <div class="skills__top">
     <h3 class="skills__h3">My Programming Skills</h3>
-    <p class="skills__mini-text">Ready to learn new technlogies</p>
+    <p class="skills__mini-text">Ready to learn new technologies.</p>
   </div>
   <div class="skills__bottom">
     <!-- Front-End -->
@@ -13,28 +13,28 @@
       <div class="skills__bottom-line"></div>
       <h4 class="skills__h4">Front-end Skills</h4>
       <p class="skills__h4-paragraph">
-        JavaScript, TypeScript, React, Astro HTML5, CSS3, SCSS, Vite, Vitest /
-        Jest, NPM
+        JavaScript, TypeScript, React, Astro,<br />HTML5, CSS3, SCSS,
+        <br />
+        Vite, Vitest / Jest, NPM.
       </p>
     </div>
 
     <!-- Front-End -->
     <div class="skills__bottom-single">
       <div class="skills__bottom-line"></div>
-      <h4 class="skills__h4">Front-end Skills</h4>
+      <h4 class="skills__h4">Back-end Skills</h4>
       <p class="skills__h4-paragraph">
-        JavaScript, TypeScript, React, Astro HTML5, CSS3, SCSS, Vite, Vitest /
-        Jest, NPM
+        Node.js, Express, PostgreSQL, MariaDB,<br />Netlify, Linux, DecapCMS.
       </p>
     </div>
 
     <!-- Front-End -->
     <div class="skills__bottom-single">
       <div class="skills__bottom-line"></div>
-      <h4 class="skills__h4">Front-end Skills</h4>
+      <h4 class="skills__h4">Other Skills</h4>
       <p class="skills__h4-paragraph">
-        JavaScript, TypeScript, React, Astro HTML5, CSS3, SCSS, Vite, Vitest /
-        Jest, NPM
+        English and Polish at a communicative level.<br />Basics of UI / UX
+        design (Figma, Photoshop).<br />Git, GitHub.
       </p>
     </div>
   </div>
@@ -46,32 +46,60 @@
   .skills {
     max-width: 1170px;
     width: 100%;
+    height: 695px;
     background-color: $color-blue-medium;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    justify-content: center;
 
     &__top {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       .skills__h3 {
         margin-left: 3.125rem; // 50px
-        color: $color-orange;
+        font-weight: 800;
+        height: 100%;
+        font-size: $fontsize-h2-34px;
+        background: $main-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
 
       .skills__mini-text {
         margin-right: 3.125rem; // 50px
         color: $color-orange;
+        font-size: $fontsize-text-16px;
+        font-weight: 500;
       }
     }
 
     &__bottom {
+      margin-top: 9.375rem; // 150px
       display: flex;
+      justify-content: space-between;
+      padding: 0 3.125rem;
       .skills__bottom-single {
+        width: 22rem; // 352px
         .skills__bottom-line {
+          background-color: red;
+          background: $main-gradient;
+          width: 2.375rem; // 38px
+          height: 3px;
+          margin-bottom: -1rem;
         }
 
         .skills__h4 {
+          font-size: $fontsize-portfolio-h3-25px;
+          font-weight: 800;
         }
 
         .skills__h4-paragraph {
+          color: $color-blue-light;
+          font-size: $fontsize-text-16px;
+          font-weight: 500;
+          line-height: 1.5;
         }
       }
     }
