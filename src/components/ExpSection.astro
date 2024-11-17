@@ -71,17 +71,28 @@
   .experience {
     max-width: 1170px;
     width: 100%;
+    margin-top: 9.375rem; // 150px
+    display: flex;
 
     &__left {
       &-h2 {
-        color: red;
+        font-weight: 800;
+        font-size: $fontsize-h2-34px;
+        background: $main-gradient;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: 426px;
       }
     }
 
     &__right {
       &-single-container {
+        display: flex;
         .experience__right-left {
-          .expierience__right-visualline {
+          .experience__right-visualline {
+            background: $main-gradient;
+            width: 2.375rem; // 38px
+            height: 3px;
           }
 
           .experience__right-h4 {
