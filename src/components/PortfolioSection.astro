@@ -10,13 +10,24 @@
   </div>
   <div class="portfolio__container">
     <div class="portfolio__container-single">
-      <a class="portfolio__container-link" href="#">www.somerandomwebsite.pl</a>
-      <h3 class="portfolio__container-h3">
-        Super amazing blazing fast web dev project
-      </h3>
-      <p class="portfolio__container-technologies">
-        JavaScript, React, Node.js, Astro
-      </p>
+      <img
+        src="/Alex_Boczek.webp"
+        alt="Portfolio Website Image"
+        class="portfolio__container-img"
+      />
+      <div class="portfolio__container-content-container">
+        <a class="portfolio__container-link" href="#"
+          >www.somerandomwebsite.pl</a
+        >
+        <h3 class="portfolio__container-h3">
+          Super amazing blazing fast web dev project
+        </h3>
+        <p class="portfolio__container-technologies">
+          JavaScript, React, Node.js, Astro
+        </p>
+        <a class="portfolio__container-btn" href="#">Live Version</a>
+        <a class="portfolio__container-btn" href="#">Check on GitHub</a>
+      </div>
     </div>
   </div>
 </section>
@@ -36,6 +47,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      margin-bottom: 6.25rem; // 100px
       .portfolio__h2 {
         font-size: $fontsize-h1-62px;
         background: $main-gradient;
@@ -55,14 +67,37 @@
 
     &__container {
       &-single {
-        .portfolio__container-link {
+        .portfolio__container-img {
+          width: 25rem; // 400px
+          height: 18.75rem; // 300px;
         }
 
-        .portfolio__container-h3 {
-        }
+        .portfolio__container-content-container {
+          width: 25rem; // 400px;
+          height: 25rem; // 400px;
+          background-color: $color-blue-medium;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 0 3.125rem; // 50px;
 
-        .portfolio__container-technologies {
-          color: $color-orange;
+          .portfolio__container-link {
+            font-size: $fontsize-portfolio-h3-25px;
+            font-weight: 200;
+            background: $main-gradient;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-decoration: none;
+          }
+
+          .portfolio__container-h3 {
+            text-align: center;
+          }
+
+          .portfolio__container-technologies {
+            color: $color-orange;
+          }
         }
       }
     }
