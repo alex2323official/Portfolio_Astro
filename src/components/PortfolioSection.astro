@@ -81,6 +81,7 @@
           align-items: center;
           justify-content: center;
           padding: 0 3.125rem; // 50px;
+          margin-top: -1.25rem; // -20px
 
           .portfolio__container-link {
             font-size: $fontsize-portfolio-h3-25px;
@@ -93,10 +94,42 @@
 
           .portfolio__container-h3 {
             text-align: center;
+            font-size: $fontsize-portfolio-h3-25px;
+            font-weight: 800;
+            line-height: 1.875rem; // 30px
+            margin-top: 0.625rem; // 10px
           }
 
           .portfolio__container-technologies {
             color: $color-orange;
+            font-size: $fontsize-text-16px;
+            font-weight: 500;
+            margin-bottom: 1.25rem; // 20px
+          }
+
+          .portfolio__container-btn {
+            color: $color-white;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: $fontsize-text-18px;
+
+            padding: 22px 30px;
+            border: 1px solid transparent; /* Set a transparent border */
+            border-radius: 0px;
+            border-image: linear-gradient(
+                to right,
+                $color-purple,
+                $color-orange
+              )
+              1;
+
+            &:hover {
+              background: $main-gradient;
+            }
+
+            &:last-of-type {
+              margin-top: 20px;
+            }
           }
         }
       }

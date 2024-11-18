@@ -81,11 +81,13 @@ const navLinks = [
               font-size: $fontsize-text-18px;
               font-weight: 500;
               text-decoration: none;
+            }
 
-              transition: color 0.3s ease;
+            .header__nav-a:last-of-type {
+              color: $color-white;
             }
             .header__nav-a:hover {
-              color: $color-blue-light;
+              text-decoration: underline;
             }
           }
           .header__nav-li:last-of-type {
@@ -100,6 +102,10 @@ const navLinks = [
                 $color-orange
               )
               1;
+
+            &:hover {
+              background: $main-gradient;
+            }
           }
         }
       }
