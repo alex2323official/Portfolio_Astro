@@ -1,0 +1,56 @@
+---
+
+---
+
+<section class="portfolio">
+  <div class="portfolio__heading-container">
+    <h2 class="portfolio__h2">Portfolio</h2>
+    <span class="portfolio__h2-undertext">Talk is cheap, show me the code.</span
+    >
+  </div>
+  <div class="portfolio__container">
+    <div class="portfolio__container-single">
+      <a class="portfolio__container-link" href="#">www.somerandomwebsite.pl</a>
+      <h3 class="portfolio__container-h3">
+        Super amazing blazing fast web dev project
+      </h3>
+      <p class="portfolio__container-technologies">
+        JavaScript, React, Node.js, Astro
+      </p>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../styles/variables.scss";
+
+  .portfolio {
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &__heading-container {
+      .portfolio__h2 {
+      }
+
+      .portfolio__h2-undertext {
+      }
+    }
+
+    &__container {
+      &-single {
+        .portfolio__container-link {
+        }
+
+        .portfolio__container-h3 {
+        }
+
+        .portfolio__container-technologies {
+          color: $color-orange;
+        }
+      }
+    }
+  }
+</style>
