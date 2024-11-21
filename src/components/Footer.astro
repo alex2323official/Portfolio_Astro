@@ -1,5 +1,6 @@
 ---
-
+// Get current year for footer copyright
+let currentYear = new Date().getFullYear();
 ---
 
 <footer class="footer">
@@ -16,7 +17,7 @@
     >
   </div>
   <p class="footer__copy">
-    © 2024. Coded by Alex Boczek. All rights reserved.
+    © {currentYear}. Coded by Alex Boczek. All rights reserved.
   </p>
 </footer>
 
@@ -29,10 +30,38 @@
     height: 725px;
     background-color: $color-blue-footer;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
     .footer__h2 {
+      font-size: $fontsize-h1-62px;
+      background: $main-gradient;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      line-height: 75px;
     }
 
     .footer__link {
+      color: $color-white;
+      text-decoration: none;
+      font-weight: 400;
+      font-size: $fontsize-text-18px;
+
+      padding: 22px 30px;
+      border: 1px solid transparent; /* Set a transparent border */
+      border-radius: 0px;
+      border-image: linear-gradient(to right, $color-purple, $color-orange) 1;
+      width: 300px;
+      background: transparent;
+
+      margin-top: 40px;
+      margin-bottom: 60px;
+
+      &:hover {
+        background: $main-gradient;
+      }
     }
 
     .footer__contact-container {
@@ -65,6 +94,8 @@
     }
 
     .footer__copy {
+      margin-top: 9.375rem; // 150px;
+      font-size: $fontsize-copyright-12px;
     }
   }
 </style>
