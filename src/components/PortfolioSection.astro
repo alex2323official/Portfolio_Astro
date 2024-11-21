@@ -1,6 +1,8 @@
 ---
 const portfolioItems = [
   {
+    imgUrl: "/Alex_Boczek.webp",
+    imgAlt: "Website preview image",
     websiteTitle: "www.somerandomwebsite.pl",
     projectTitle: "Super amazing blazing fast web dev project",
     technologies: "JavaScript, React, Node.js, Astro",
@@ -8,6 +10,8 @@ const portfolioItems = [
     projectGitHub: "#",
   },
   {
+    imgUrl: "/Alex_Boczek.webp",
+    imgAlt: "Website preview image",
     websiteTitle: "www.somerandomwebsite.pl",
     projectTitle: "Super amazing blazing fast web dev project",
     technologies: "JavaScript, React, Node.js, Astro",
@@ -15,6 +19,8 @@ const portfolioItems = [
     projectGitHub: "#",
   },
   {
+    imgUrl: "/Alex_Boczek.webp",
+    imgAlt: "Website preview image",
     websiteTitle: "www.somerandomwebsite.pl",
     projectTitle: "Super amazing blazing fast web dev project",
     technologies: "JavaScript, React, Node.js, Astro",
@@ -22,6 +28,8 @@ const portfolioItems = [
     projectGitHub: "#",
   },
   {
+    imgUrl: "/Alex_Boczek.webp",
+    imgAlt: "Przemek Legierski website preview image",
     websiteTitle: "www.przemeklegierski.pl",
     projectTitle: "Business website (portfolio) for photographer",
     technologies: "JavaScript, React, Node.js, Astro",
@@ -38,26 +46,41 @@ const portfolioItems = [
     >
   </div>
   <div class="portfolio__container">
-    <div class="portfolio__container-single">
-      <img
-        src="/Alex_Boczek.webp"
-        alt="Portfolio Website Image"
-        class="portfolio__container-img"
-      />
-      <div class="portfolio__container-content-container">
-        <a class="portfolio__container-link" href="#"
-          >www.somerandomwebsite.pl</a
-        >
-        <h3 class="portfolio__container-h3">
-          Super amazing blazing fast web dev project
-        </h3>
-        <p class="portfolio__container-technologies">
-          JavaScript, React, Node.js, Astro
-        </p>
-        <a class="portfolio__container-btn" href="#">Live Version</a>
-        <a class="portfolio__container-btn" href="#">Check on GitHub</a>
-      </div>
-    </div>
+    <!-- Create all portfolio items -->
+    {
+      portfolioItems.map((portfolioItem) => (
+        <div class="portfolio__container-single">
+          <img
+            src={portfolioItem.imgUrl}
+            alt={portfolioItem.imgAlt}
+            class="portfolio__container-img"
+          />
+          <div class="portfolio__container-content-container">
+            <a
+              target="_blank"
+              class="portfolio__container-link"
+              href={portfolioItem.projectUrl}
+            >
+              {portfolioItem.websiteTitle}
+            </a>
+            <h3 class="portfolio__container-h3">
+              Super amazing blazing fast web dev project
+            </h3>
+            <p class="portfolio__container-technologies">
+              JavaScript, React, Node.js, Astro
+            </p>
+            <a target="_blank" class="portfolio__container-btn" href="#">
+              Live Version
+            </a>
+            <a target="_blank" class="portfolio__container-btn" href="#">
+              Check on GitHub
+            </a>
+          </div>
+        </div>
+      ))
+    }
+
+    <!-- End of portfolio items loop -->
   </div>
 </section>
 
