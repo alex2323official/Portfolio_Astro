@@ -3,13 +3,68 @@
 ---
 
 <footer class="footer">
-  <p>test footer</p>
+  <h2 class="footer__h2">Check me on GitHub</h2>
+  <a class="footer__link" href="https://github.com/alex2323official"
+    >github.com/alex2323official</a
+  >
+  <div class="footer__contact-container">
+    <a href="mailto:kontakt@alexboczek.pl" class="footer__contact-email"
+      >E-mail: kontakt@alexboczek.pl</a
+    >
+    <a href="tel:+48720432964" class="footer__contact-phone"
+      >Phone: +48 720-432-964</a
+    >
+  </div>
+  <p class="footer__copy">
+    © 2024. Coded by Alex Boczek. All rights reserved.
+  </p>
 </footer>
 
 <style lang="scss">
+  // SCSS Variables
+  @import "../styles/variables.scss";
   .footer {
     max-width: 1170px;
     width: 100%;
-    background-color: greenyellow;
+    height: 725px;
+    background-color: $color-blue-footer;
+
+    .footer__h2 {
+    }
+
+    .footer__link {
+    }
+
+    .footer__contact-container {
+      display: flex;
+      flex-direction: column;
+
+      .footer__contact-email {
+        color: $color-white;
+        text-decoration: none;
+        font-size: $fontsize-hero-btntext-20px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $color-orange;
+        }
+      }
+
+      .footer__contact-phone {
+        color: $color-white;
+        text-decoration: none;
+        font-size: $fontsize-hero-btntext-20px;
+        font-weight: 500;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $color-orange;
+        }
+      }
+    }
+
+    .footer__copy {
+    }
   }
 </style>
