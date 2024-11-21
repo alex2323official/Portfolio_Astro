@@ -64,15 +64,23 @@ const portfolioItems = [
               {portfolioItem.websiteTitle}
             </a>
             <h3 class="portfolio__container-h3">
-              Super amazing blazing fast web dev project
+              {portfolioItem.projectTitle}
             </h3>
             <p class="portfolio__container-technologies">
-              JavaScript, React, Node.js, Astro
+              {portfolioItem.technologies}
             </p>
-            <a target="_blank" class="portfolio__container-btn" href="#">
+            <a
+              target="_blank"
+              class="portfolio__container-btn"
+              href={portfolioItem.projectUrl}
+            >
               Live Version
             </a>
-            <a target="_blank" class="portfolio__container-btn" href="#">
+            <a
+              target="_blank"
+              class="portfolio__container-btn"
+              href={portfolioItem.projectGitHub}
+            >
               Check on GitHub
             </a>
           </div>
