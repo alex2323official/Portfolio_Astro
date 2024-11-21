@@ -42,6 +42,7 @@ const { title, description } = Astro.props;
     <!-- Same header + navigation for all pages -->
     <Header />
 
+    <img src="/blur/blur_hero.png" alt="blur effect" class="home__blur" />
     <main>
       <slot />
     </main>
@@ -74,6 +75,11 @@ const { title, description } = Astro.props;
     main {
       max-width: 1170px;
       width: 100%;
+    }
+
+    .home__blur {
+      position: absolute;
+      z-index: -1;
     }
   }
 </style>
