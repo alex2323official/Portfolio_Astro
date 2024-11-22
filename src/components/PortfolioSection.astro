@@ -41,6 +41,11 @@ const portfolioItems = [
 ---
 
 <section class="portfolio">
+  <img
+            src="/blur/blur_hero.png"
+            alt="blur effect"
+            class="portfolio__blur"
+          />
   <div class="portfolio__heading-container">
     <h2 class="portfolio__h2">Portfolio</h2>
     <span class="portfolio__h2-undertext">Talk is cheap, show me the code.</span
@@ -114,6 +119,16 @@ const portfolioItems = [
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+
+    &__blur {
+      position: absolute;
+      right: 50%;
+      top: 0;
+      transform: translate(50%, 0%);
+      height: 156.25rem; //2500px;
+      z-index: -1;
+    }
 
     &__heading-container {
       display: flex;
@@ -161,7 +176,6 @@ const portfolioItems = [
 
           position: relative;
 
-
           .portfolio__blur-left-top {
             position: absolute;
             top: 0;
@@ -185,6 +199,7 @@ const portfolioItems = [
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             text-decoration: none;
+            z-index: 99;
           }
 
           .portfolio__container-h3 {
@@ -193,6 +208,7 @@ const portfolioItems = [
             font-weight: 800;
             line-height: 1.875rem; // 30px
             margin-top: 0.625rem; // 10px
+            z-index: 99;
           }
 
           .portfolio__container-technologies {
@@ -200,6 +216,7 @@ const portfolioItems = [
             font-size: $fontsize-text-16px;
             font-weight: 500;
             margin-bottom: 1.25rem; // 20px
+            z-index: 99;
           }
 
           .portfolio__container-btn {
@@ -217,6 +234,7 @@ const portfolioItems = [
                 $color-orange
               )
               1;
+              z-index: 99;
 
             &:hover {
               background: $main-gradient;

@@ -54,8 +54,9 @@ let currentYear = new Date().getFullYear();
       top: 0;
       left: 0;
       z-index: 1;
-      width: 500px;
+      width: 2000px;
       height: 700px;
+      opacity: 0.3;
     }
 
     .skills__blur-right-down {
@@ -63,8 +64,9 @@ let currentYear = new Date().getFullYear();
       bottom: 0;
       right: 0;
       z-index: 1;
-      height: 700px;
-      width: 500px;
+      height: 900px;
+      width: 2000px;
+      opacity: 0.3;
     }
 
     .footer__h2 {
@@ -90,6 +92,7 @@ let currentYear = new Date().getFullYear();
 
       margin-top: 2.5rem; // 40px;
       margin-bottom: 3.75rem; // 60px;
+      z-index: 99;
 
       &:hover {
         background: $main-gradient;
@@ -99,6 +102,8 @@ let currentYear = new Date().getFullYear();
     .footer__contact-container {
       display: flex;
       flex-direction: column;
+
+      z-index: 99;
 
       .footer__contact-email {
         color: $color-orange;
