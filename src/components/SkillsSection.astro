@@ -3,11 +3,16 @@
 ---
 
 <section class="skills">
-  <!-- Add blur effect in Main section -->
+  <!-- Add blur effect in Skill section -->
   <img
     src="/blur/skills_up_left.png"
     alt="blur effect"
     class="skills__blur-left-top"
+  />
+  <img
+    src="/blur/skills_down_right.png"
+    alt="blur effect"
+    class="skills__blur-right-down"
   />
 
   <div class="skills__top">
@@ -64,6 +69,13 @@
       position: absolute;
       top: 0;
       left: 0;
+      z-index: 1;
+    }
+
+    .skills__blur-right-down {
+      position: absolute;
+      bottom: 0;
+      right: 0;
       z-index: 1;
     }
 
