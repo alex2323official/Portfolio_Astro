@@ -4,6 +4,18 @@ let currentYear = new Date().getFullYear();
 ---
 
 <footer class="footer">
+  <!-- Add blur effect in Footer section -->
+  <img
+    src="/blur/skills_up_left.png"
+    alt="blur effect"
+    class="skills__blur-left-top"
+  />
+  <img
+    src="/blur/skills_down_right.png"
+    alt="blur effect"
+    class="skills__blur-right-down"
+  />
+
   <h2 class="footer__h2">Check me on GitHub</h2>
   <a class="footer__link" href="https://github.com/alex2323official"
     >github.com/alex2323official</a
@@ -34,6 +46,26 @@ let currentYear = new Date().getFullYear();
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    position: relative;
+
+    .skills__blur-left-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      width: 500px;
+      height: 700px;
+    }
+
+    .skills__blur-right-down {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      z-index: 1;
+      height: 700px;
+      width: 500px;
+    }
 
     .footer__h2 {
       font-size: $fontsize-h1-62px;
