@@ -56,6 +56,17 @@ const portfolioItems = [
             class="portfolio__container-img"
           />
           <div class="portfolio__container-content-container">
+            <!-- Add blur effect -->
+          <img
+            src="/blur/skills_up_left.png"
+            alt="blur effect"
+            class="portfolio__blur-left-top"
+          />
+          <img
+            src="/blur/skills_down_right.png"
+            alt="blur effect"
+            class="portfolio__blur-right-down"
+          />
             <a
               target="_blank"
               class="portfolio__container-link"
@@ -145,6 +156,25 @@ const portfolioItems = [
           justify-content: center;
           padding: 0 3.125rem; // 50px;
           margin-top: -1.25rem; // -20px
+
+          position: relative;
+
+
+          .portfolio__blur-left-top {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            opacity: .2;
+          }
+
+          .portfolio__blur-right-down {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            z-index: 1;
+            opacity: .2;
+          }
 
           .portfolio__container-link {
             font-size: $fontsize-portfolio-h3-25px;
