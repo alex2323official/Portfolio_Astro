@@ -3,6 +3,13 @@
 ---
 
 <section class="skills">
+  <!-- Add blur effect in Main section -->
+  <img
+    src="/blur/skills_up_left.png"
+    alt="blur effect"
+    class="skills__blur-left-top"
+  />
+
   <div class="skills__top">
     <h3 class="skills__h3">My Programming Skills</h3>
     <p class="skills__mini-text">Ready to learn new technologies.</p>
@@ -50,8 +57,15 @@
     background-color: $color-blue-medium;
     display: flex;
     flex-direction: column;
-    // align-items: center;
     justify-content: center;
+    position: relative;
+
+    .skills__blur-left-top {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
 
     &__top {
       display: flex;
