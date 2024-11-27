@@ -31,7 +31,8 @@ const navLinks = [
 ];
 ---
 
-<header>
+<!-- Header Desktop -->
+<header class="header-desktop">
   <div class="header__container">
     <p class="header__logo">Alex Boczek</p>
     <nav class="header__nav">
@@ -50,12 +51,49 @@ const navLinks = [
   </div>
 </header>
 
+<!-- Header Mobile -->
+<header class="header-mobile">
+  <div class="header-mobile__container">
+    <p class="header-mobile__logo">Alex Boczek</p>
+    <nav class="header-mobile__nav">
+      <ul class="header-mobile__nav-ul">
+        {
+          navLinks.map((item) => (
+            <li class="header-mobile__nav-li">
+              <a class="header-mobile__nav-a" href={item.url}>
+                {item.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</header>
+
 <style lang="scss">
   @import "../styles/variables.scss";
-  header {
+
+  // Header Mobile
+  .header-mobile {
+    display: none;
+    width: 100%;
+
+    @media (max-width: 1024px) {
+      display: flex;
+    }
+  }
+
+  // Header Desktop
+  .header-desktop {
     max-width: 1170px;
     width: 100%;
     margin-top: 3.125rem; // 50px
+
+    @media (max-width: 1024px) {
+      display: none;
+    }
+
     .header__container {
       display: flex;
       align-items: center;
