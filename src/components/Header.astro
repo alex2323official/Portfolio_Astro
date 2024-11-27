@@ -78,9 +78,26 @@ const navLinks = [
   .header-mobile {
     display: none;
     width: 100%;
-
     @media (max-width: 1024px) {
       display: flex;
+    }
+
+    &__container {
+      background-color: $color-blue-medium;
+      width: 100vw;
+      height: 100vh;
+      position: fixed;
+      z-index: 4;
+      .header-mobile__logo {
+      }
+      .header-mobile__nav {
+        ul {
+          li {
+            a {
+            }
+          }
+        }
+      }
     }
   }
 
