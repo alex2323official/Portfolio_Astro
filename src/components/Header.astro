@@ -53,7 +53,39 @@ const navLinks = [
 
 <!-- Header Mobile -->
 <header class="header-mobile">
-  <div id="hamburger-switch" class="header-mobile__hamburger">===</div>
+  <div id="hamburger-switch" class="header-mobile__hamburger">
+    <!-- Open SVG -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+      id="opensvg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path>
+    </svg>
+    <!-- Close SVG -->
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke-width="1.5"
+      stroke="currentColor"
+      class="size-6"
+      id="closesvg"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M6 18 18 6M6 6l12 12"></path>
+    </svg>
+  </div>
+
   <div id="hamburger-menu" class="header-mobile__container">
     <p class="header-mobile__logo">Alex Boczek</p>
     <nav class="header-mobile__nav">
@@ -86,8 +118,15 @@ const navLinks = [
     .header-mobile__hamburger {
       position: fixed;
       z-index: 10;
-      right: 2rem;
-      top: 2rem;
+      right: 1rem;
+      top: 1rem;
+
+      svg {
+        height: 3rem;
+        width: 3rem;
+        color: $color-purple;
+        // background-color: white;
+      }
     }
 
     &__container {
@@ -185,14 +224,21 @@ const navLinks = [
   // Hambuger menu
   const hamburgerSwitcher = document.querySelector("#hamburger-switch");
   const hamburgerMenu = document.querySelector(".header-mobile__container");
+  const openSvg = document.querySelector("#opensvg");
+  const closeSvg = document.querySelector("#closesvg");
 
   hamburgerMenu.style.display = "none";
+  closeSvg.style.display = "none";
 
   hamburgerSwitcher.addEventListener("click", (event) => {
     if (hamburgerMenu.style.display === "none") {
       hamburgerMenu.style.display = "flex";
+      closeSvg.style.display = "block";
+      openSvg.style.display = "none";
     } else {
       hamburgerMenu.style.display = "none";
+      closeSvg.style.display = "none";
+      openSvg.style.display = "block";
     }
   });
 </script>
