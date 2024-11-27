@@ -75,8 +75,11 @@ const { title, description } = Astro.props;
     position: relative;
 
     main {
-      max-width: 1170px;
       width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
 
     .home__blur {
