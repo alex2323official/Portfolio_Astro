@@ -139,6 +139,10 @@
         margin-top: 3.125rem; // 50px
       }
 
+      @media (max-width: 620px) {
+        margin-top: 1rem;
+      }
+
       &-single-container {
         display: flex;
         margin-top: 1rem;
@@ -153,6 +157,13 @@
           justify-content: center;
         }
         .experience__right-left {
+          @media (max-width: 1024px) {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
           .experience__right-visualline {
             background: $main-gradient;
             width: 2.375rem; // 38px
@@ -173,12 +184,30 @@
 
           @media (max-width: 1024px) {
             margin-left: 0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+          }
+
+          @media (max-width: 620px) {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
           }
           .experience__right-text {
             color: $color-blue-light;
             font-weight: 500;
             font-size: $fontsize-text-14px;
             width: 20.875rem; // 334px
+
+            @media (max-width: 620px) {
+              width: 90%;
+              text-align: center;
+            }
           }
         }
       }
