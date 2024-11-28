@@ -111,13 +111,14 @@ const navLinks = [
   .header-mobile {
     display: none;
     width: 100%;
+    z-index: 1000;
     @media (max-width: 1024px) {
       display: flex;
     }
 
     .header-mobile__hamburger {
       position: fixed;
-      z-index: 10;
+      z-index: 1000;
       right: 1rem;
       top: 1rem;
 
@@ -140,13 +141,27 @@ const navLinks = [
       height: 100vh;
       position: fixed;
       display: none;
-      z-index: 8;
+      z-index: 800;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       .header-mobile__logo {
+        font-size: $fontsize-h2-34px;
+        font-weight: 800;
+        text-transform: uppercase;
       }
       .header-mobile__nav {
         ul {
+          list-style: none;
           li {
+            margin-top: 1rem;
             a {
+              color: $color-white;
+              font-size: $fontsize-h2-34px;
+              font-weight: 500;
+              text-decoration: none;
             }
           }
         }
@@ -245,5 +260,15 @@ const navLinks = [
       closeSvg.style.display = "none";
       openSvg.style.display = "block";
     }
+  });
+
+  //  Action after clicking link in Hamburger menu
+  // just close it
+  const hambugerMenuUl = document.querySelector(".header-mobile__nav-ul");
+
+  hambugerMenuUl.addEventListener("click", (event) => {
+    hamburgerMenu.style.display = "none";
+    closeSvg.style.display = "none";
+    openSvg.style.display = "block";
   });
 </script>
