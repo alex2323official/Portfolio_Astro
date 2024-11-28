@@ -51,6 +51,12 @@
     &__right {
       width: 34.375rem; // 550px
 
+      @media (max-width: 620px) {
+        width: 100%;
+        text-align: center;
+        padding: 0 10px;
+      }
+
       &-littletext {
         font-size: $fontsize-text-16px;
         color: $color-blue-cool;
