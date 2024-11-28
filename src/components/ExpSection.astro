@@ -79,8 +79,10 @@
     position: relative;
 
     @media (max-width: 1024px) {
-      background-color: red;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 3.125rem 0;
     }
 
     .experience__blur {
@@ -95,6 +97,15 @@
 
     &__left {
       margin-left: 8.4375rem;
+
+      @media (max-width: 1024px) {
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
       &-h2 {
         font-weight: 800;
         font-size: $fontsize-h2-34px;
@@ -103,17 +114,39 @@
         -webkit-text-fill-color: transparent;
         width: 426px;
 
+        @media (max-width: 1024px) {
+          text-align: center;
+        }
         &:last-of-type {
           margin-top: 6.25rem; // 100px
+          @media (max-width: 1024px) {
+            margin-top: 3.125rem; // 50px
+          }
         }
       }
     }
 
     &__right {
       margin-right: 8.4375rem;
+
+      @media (max-width: 1024px) {
+        margin-right: 0;
+        margin-top: 3.125rem; // 50px
+      }
+
       &-single-container {
         display: flex;
         margin-top: 1rem;
+
+        @media (max-width: 1024px) {
+          margin-top: 3rem;
+        }
+
+        @media (max-width: 1024px) {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+        }
         .experience__right-left {
           .experience__right-visualline {
             background: $main-gradient;
@@ -132,6 +165,10 @@
 
         .experience__right-right {
           margin-left: 100px;
+
+          @media (max-width: 1024px) {
+            margin-left: 0;
+          }
           .experience__right-text {
             color: $color-blue-light;
             font-weight: 500;
