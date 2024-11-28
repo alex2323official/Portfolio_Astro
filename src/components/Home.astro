@@ -54,7 +54,7 @@
       justify-content: center;
       @media (max-width: 1024px) {
         align-items: center;
-        padding: 100px 0;
+        padding: 6.25rem 0;
       }
       h1 {
         font-size: $fontsize-h1-62px;
@@ -136,6 +136,10 @@
       border: solid 2px $color-white;
       object-fit: cover;
       margin-right: 3.125rem; // 50px
+
+      @media (max-width: 1024px) {
+        margin-right: 0;
+      }
     }
   }
 </style>
