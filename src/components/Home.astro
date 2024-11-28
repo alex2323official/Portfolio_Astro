@@ -43,11 +43,19 @@
 
     overflow: hidden;
 
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      justify-content: center;
+    }
+
     .home__left {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      // margin-left: 3.125rem; // 50px
+      @media (max-width: 1024px) {
+        align-items: center;
+        padding: 100px 0;
+      }
       h1 {
         font-size: $fontsize-h1-62px;
         background: $main-gradient;
@@ -55,6 +63,9 @@
         -webkit-text-fill-color: transparent;
         line-height: 75px;
         margin-top: 0;
+        @media (max-width: 1024px) {
+          text-align: center;
+        }
       }
       .home__text {
         width: 34.625rem; // 554px;
